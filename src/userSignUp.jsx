@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./index.css";
 
 function UserSignUp() {
   const [formData, setFormData] = useState({
@@ -28,17 +29,10 @@ function UserSignUp() {
   };
 
   return (
-    <div
-      style={{
-        maxWidth: "500px",
-        margin: "auto",
-        padding: "20px",
-        border: "1px solid #ccc",
-      }}
-    >
+    <div className="signup-container">
       <h2>User Sign-Up</h2>
       <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: "10px" }}>
+        <div className="form-group">
           <label>
             Full Name:
             <input
@@ -47,11 +41,10 @@ function UserSignUp() {
               value={formData.fullName}
               onChange={handleChange}
               required
-              style={{ width: "100%", padding: "8px" }}
             />
           </label>
         </div>
-        <div style={{ marginBottom: "10px" }}>
+        <div className="form-group">
           <label>
             Username:
             <input
@@ -60,11 +53,10 @@ function UserSignUp() {
               value={formData.username}
               onChange={handleChange}
               required
-              style={{ width: "100%", padding: "8px" }}
             />
           </label>
         </div>
-        <div style={{ marginBottom: "10px" }}>
+        <div className="form-group">
           <label>
             Email:
             <input
@@ -73,23 +65,21 @@ function UserSignUp() {
               value={formData.email}
               onChange={handleChange}
               required
-              style={{ width: "100%", padding: "8px" }}
             />
           </label>
         </div>
-        <div style={{ marginBottom: "10px" }}>
+        <div className="form-group">
           <label>
             Address:
-            <textarea
+            <input
               name="address"
               value={formData.address}
               onChange={handleChange}
               required
-              style={{ width: "100%", padding: "8px" }}
             />
           </label>
         </div>
-        <div style={{ marginBottom: "10px" }}>
+        <div className="form-group">
           <label>
             Phone Number:
             <input
@@ -98,14 +88,10 @@ function UserSignUp() {
               value={formData.phone}
               onChange={handleChange}
               required
-              style={{ width: "100%", padding: "8px" }}
             />
           </label>
         </div>
-        <button
-          type="submit"
-          style={{ padding: "10px 20px", background: "blue", color: "#fff" }}
-        >
+        <button type="submit" className="signup-button">
           Sign Up
         </button>
       </form>
