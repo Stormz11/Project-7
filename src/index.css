@@ -33,8 +33,7 @@ body {
   color: #e0e0e0;
 }
 
-.form-group input,
-.form-group textarea {
+.form-group input {
   width: 100%;
   padding: 10px;
   font-size: 14px;
@@ -43,10 +42,6 @@ body {
   background-color: #2e2e2e;
   color: #e0e0e0;
   box-sizing: border-box;
-}
-
-textarea {
-  resize: none;
 }
 
 .signup-button {
